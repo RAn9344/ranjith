@@ -1,0 +1,51 @@
+ header {
+    height: 100px;
+    font-size: 25px;
+    padding-left: 60px;
+    padding-top: 50px;
+    font-family: "Inconsolata", monospace;
+    text-transform: uppercase;
+    font-weight: bold;
+   
+}
+div {
+    width: 49%;
+    display: inline-block;
+    vertical-align: top;
+}
+img {
+    float: right;
+    width: 300px;
+    margin-right: 30px;
+}
+main {
+    
+    font-family: "Space Mono", monospace;
+    height: 540px;
+}
+h2 {
+    line-height: 2;
+    font-size: 40px;
+    font-weight: bold;
+    color: #333333;
+    
+}
+p {
+    color: #333333;
+    font-size: 20px;
+    line-height: 1.5;
+}
+button {
+    background-color: #333333;
+    border: none;
+    color: white;
+    text-transform: uppercase;
+    padding: 15px;
+    font-size: 10px;
+    margin-top: 20px;
+}
+footer {
+    text-align: center;
+    font-size: 20px;
+    color: gray;
+}
