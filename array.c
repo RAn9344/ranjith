@@ -1,157 +1,364 @@
-//array values
+/*//printing values
 #include<stdio.h>
 int main()
 {
-	int a[]={2,4,6,8};
-	for(int i=0;i<=3;i++)//i<4
+	int i=0,j=0;
+	int a[3][4]={{1,2,3,4},{2,3,4,7},{3,4,5,5}};
+	for(i=0;i<3;i++)
 	{
-		printf("%d\n",a[i]);
+		for(j=0;j<4;j++)
+		{
+			printf("a[%d] [%d] = %d \n",i,j,a[i][j]);
+		}
+	}
+	for(i=0;i<3;i++)
+	{
+		for(j=0;j<4;j++)
+		{
+			printf("%d\t",a[i][j]);
+		}
+		printf("\n");
+	}
+	return 0;  
+}
+
+//printing matrix
+#include<stdio.h>
+int main()
+{
+	int i=0,j=0;
+	int g,h;
+	printf("Enter row size:");
+	scanf("%d",&g);
+	printf("Enter column size:");
+	scanf("%d",&h);
+	int a[g][h];
+	printf("Enter matrix elements:\n");
+	for(i=0;i<g;i++)
+	{
+		for(j=0;j<h;j++)
+		{
+			printf("a[%d] [%d] =",i,j);
+			scanf("%d",&a[i][j]);
+			
+		}
+	}
+	printf("Display elements:\n");
+	for(i=0;i<g;i++)
+	{
+		for(j=0;j<h;j++)
+		{
+			printf("a[%d] [%d] = [%d]\n",i,j,a[i][j]);
+		}
+	}
+	printf("Matrix:\n");
+	for(i=0;i<g;i++)
+	{
+		for(j=0;j<h;j++)
+		{
+			printf("%d\t",a[i][j]);
+		}
+		printf("\n");
 	}
 	return 0;
 }
 
-//changing array values
+//printing two matrix
 #include<stdio.h>
 int main()
 {
-	int a[]={2,4,6,8};
-	for(int i=0;i<=3;i++)//i<4
+	int i=0,j=0;
+	int g,h;
+	printf("Enter row size:");
+	scanf("%d",&g);
+	printf("Enter column size:");
+	scanf("%d",&h);
+	int a[g][h];
+	int b[g][h];
+	printf("Enter first matrix elements:\n");
+	for(i=0;i<g;i++)
 	{
-		printf("%d\n",a[i]);
+		for(j=0;j<h;j++)
+		{
+			printf("a[%d] [%d] =",i,j);
+			scanf("%d",&a[i][j]);
+			
+		}
 	}
-int ch,b;
-printf("Enter the index of element you want to change:");
-scanf("%d",&ch);
-printf("Enter value:");
-scanf("%d",&b);
-a[ch]=b;
-for (int i=0;i<=3;i++)
-{
-	printf("%d\n",a[i]);
+	printf("First matrix:\n");
+	for(i=0;i<g;i++)
+	{
+		for(j=0;j<h;j++)
+		{
+			printf("%d\t",a[i][j]);
+		}
+		printf("\n");
+	}
+	printf("Enter Second matrix elements:\n");
+	for(i=0;i<g;i++)
+	{
+		for(j=0;j<h;j++)
+		{
+			printf("b[%d] [%d] =",i,j);
+			scanf("%d",&b[i][j]);
+			
+		}
+	}
+	printf("Second matrix:\n");
+	for(i=0;i<g;i++)
+	{
+		for(j=0;j<h;j++)
+		{
+			printf("%d\t",b[i][j]);
+		}
+		printf("\n");
+	}
+	return 0;
 	
 }
-return 0;
-}
 
-//N numeber of array values
+//printing add two matrix
 #include<stdio.h>
 int main()
 {
-	int n=5;
-	int a[n];
-	for(int i=0;i<=4;i++)
+	int i=0,j=0;
+	int g,h;
+	printf("Enter row size:");
+	scanf("%d",&g);
+	printf("Enter column size:");
+	scanf("%d",&h);
+	int a[g][h];
+	int b[g][h];
+	printf("Enter first matrix elements:\n");
+	for(i=0;i<g;i++)
 	{
-		printf("Enter a[%d]:",i);
-		scanf("%d",&a[i]);
-	}
-	for (int i=0;i<n;i++)
-	{
-		printf("%d\n",a[i]);
-	}
-	return 0;
-}
-
-//sorting values
-#include<stdio.h>
-int main()
-{
-	int n=5,i;
-	int j,temp;
-	int a[n];
-	for(int i=0;i<n;i++)
-	{
-		printf("Enter a[%d]:",i);
-		scanf("%d",&a[i]);
-	}
-	printf("Before sorting:\n");
-	for(i=0;i<n;i++)
-	{
-		printf("%d\n",a[i]);
-	}
-	for(int i=0;i<n;i++)
-	{
-		for(j=i+1;j<n;j++)
+		for(j=0;j<h;j++)
 		{
-			if(a[j]>a[i])
-			{
-				temp=a[i];
-				a[i]=a[j];
-				a[j]=temp;
-			}
+			printf("a[%d] [%d] =",i,j);
+			scanf("%d",&a[i][j]);
+			
 		}
 	}
-	printf("After sorting:\n");
-	for(i=0;i<n;i++)
+	printf("First matrix:\n");
+	for(i=0;i<g;i++)
 	{
-		printf("%d\n",a[i]);
+		for(j=0;j<h;j++)
+		{
+			printf("%d\t",a[i][j]);
+		}
+		printf("\n");
+	}
+	printf("Enter Second matrix elements:\n");
+	for(i=0;i<g;i++)
+	{
+		for(j=0;j<h;j++)
+		{
+			printf("b[%d] [%d] =",i,j);
+			scanf("%d",&b[i][j]);
+			
+		}
+	}
+	printf("Second matrix:\n");
+	for(i=0;i<g;i++)
+	{
+		for(j=0;j<h;j++)
+		{
+			printf("%d\t",b[i][j]);
+		}
+		printf("\n");
+	}
+	printf("Addition of two matrix:\n");
+	for(i=0;i<g;i++)
+	{
+		for(j=0;j<h;j++)
+		{
+			printf("%d\t",a[i][j]+b[i][j]);
+		}
+		printf("\n");
 	}
 	return 0;
+	
 }
-//sorting values
+
+//substraction matrix
 
 #include<stdio.h>
 int main()
 {
-	int n=5,i;
-	int j,temp;
-	int a[n];
-	for(int i=0;i<n;i++)
+	int i=0,j=0;
+	int g,h;
+	printf("Enter row size:");
+	scanf("%d",&g);
+	printf("Enter column size:");
+	scanf("%d",&h);
+	int a[g][h];
+	int b[g][h];
+	printf("Enter first matrix elements:\n");
+	for(i=0;i<g;i++)
 	{
-		printf("Enter a[%d]:",i);
-		scanf("%d",&a[i]);
-	}
-	printf("Before sorting:\n");
-	for(i=0;i<n;i++)
-	{
-		printf("%d\n",a[i]);
-	}
-	for(int i=0;i<n;i++)
-	{
-		for(j=i+1;j<n;j++)
+		for(j=0;j<h;j++)
 		{
-			if(a[j]<a[i])
-			{
-				temp=a[i];
-				a[i]=a[j];
-				a[j]=temp;
-			}
+			printf("a[%d] [%d] =",i,j);
+			scanf("%d",&a[i][j]);
+			
 		}
 	}
-	printf("After sorting:\n");
-	for(i=0;i<n;i++)
+	printf("First matrix:\n");
+	for(i=0;i<g;i++)
 	{
-		printf("%d\n",a[i]);
+		for(j=0;j<h;j++)
+		{
+			printf("%d\t",a[i][j]);
+		}
+		printf("\n");
+	}
+	printf("Enter Second matrix elements:\n");
+	for(i=0;i<g;i++)
+	{
+		for(j=0;j<h;j++)
+		{
+			printf("b[%d] [%d] =",i,j);
+			scanf("%d",&b[i][j]);
+			
+		}
+	}
+	printf("Second matrix:\n");
+	for(i=0;i<g;i++)
+	{
+		for(j=0;j<h;j++)
+		{
+			printf("%d\t",b[i][j]);
+		}
+		printf("\n");
+	}
+	printf("Addition of two matrix:\n");
+	for(i=0;i<g;i++)
+	{
+		for(j=0;j<h;j++)
+		{
+			printf("%d\t",a[i][j]*b[i][j]);
+		}
+		printf("\n");
 	}
 	return 0;
+	
 }
 
+//Multiplication two matrix
 
-//array largest elements
 #include<stdio.h>
-void main()
+int main()
 {
-	int a[100],i,n,f1,s1;
-	printf("Enter array size:");
+	int i=0,j=0;
+	int g,h;
+	printf("Enter row size:");
+	scanf("%d",&g);
+	printf("Enter column size:");
+	scanf("%d",&h);
+	int a[g][h];
+	int b[g][h];
+	printf("Enter first matrix elements:\n");
+	for(i=0;i<g;i++)
+	{
+		for(j=0;j<h;j++)
+		{
+			printf("a[%d] [%d] =",i,j);
+			scanf("%d",&a[i][j]);
+			
+		}
+	}
+	printf("First matrix:\n");
+	for(i=0;i<g;i++)
+	{
+		for(j=0;j<h;j++)
+		{
+			printf("%d\t",a[i][j]);
+		}
+		printf("\n");
+	}
+	printf("Enter Second matrix elements:\n");
+	for(i=0;i<g;i++)
+	{
+		for(j=0;j<h;j++)
+		{
+			printf("b[%d] [%d] =",i,j);
+			scanf("%d",&b[i][j]);
+			
+		}
+	}
+	printf("Second matrix:\n");
+	for(i=0;i<g;i++)
+	{
+		for(j=0;j<h;j++)
+		{
+			printf("%d\t",b[i][j]);
+		}
+		printf("\n");
+	}
+	printf("Multiplication of two matrix:\n");
+	for(i=0;i<g;i++)
+	{
+		for(j=0;j<h;j++)
+		{
+			int c=0;
+			for( int k=0;k<h;k++)
+			{
+				c=c+(a[i][k]*b[k][j]);
+			}
+			printf("%d",c);
+			printf("\t");
+		}
+	printf("\ n");
+	}
+	return 0;
+	
+}
+
+//printing biggest number in array
+#include<stdio.h>
+int main()
+{
+	int i,n,a[50];
+	printf("Enter n:");
 	scanf("%d",&n);
-	printf("Enter array elements:\n");
 	for(i=0;i<n;i++)
 	{
+		printf("Enter number %d:",i);
 		scanf("%d",&a[i]);
 	}
-	f1=a[0];
-	s1=a[1];
 	for(i=0;i<n;i++)
 	{
-		if(a[i]>f1)
+		if(a[0]<a[i])
 		{
-			s1=f1;
-			f1=a[i];
-		}
-		else if (a[i]>s1&&a[i]!=f1)
-		{
-			s1=a[i];
+			a[0]=a[i];
 		}
 	}
-	printf("largest= %d , second largest=%d",f1,s1);
+	printf("Biggest number is %d",a[0]);
+	
+}*/
+
+#include<stdio.h>
+int main()
+{
+	int i,n,a[50];
+	printf("Enter n:");
+	scanf("%d",&n);
+	for(i=0;i<n;i++)
+	{
+		printf("Enter number %d:",i);
+		scanf("%d",&a[i]);
+	}
+	for(i=0;i<n;i++)
+	{
+		if(a[0]<a[i])
+		{
+			a[0]=a[i];
+		}
+		else
+		{
+			a[0]=a[0]
+		}
+	}
+	printf("Biggest number is %d",a[0]);
 	
 }
