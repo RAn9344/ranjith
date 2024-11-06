@@ -1,194 +1,4 @@
-/*//printing Arithmetic values using function
-#include<stdio.h>
-void add(int g,int h)
-{
-	int c;
-	c=g+h;
-	printf("Addition is %d\n",c);
-}
-void sub(int g,int h)
-{
-	int c1;
-	c1=g-h;
-	printf("Substractio is %d\n",c1);
-}
-void mul(int g,int h)
-{
-	int c2;
-	c2=g*h;
-	printf("Multiplication is %d\n",c2);
-}
-void div(int g,int h)
-{
-	int c3;
-	c3=g/h;
-	printf("Addition is %d\n",c3);
-}
-int main()
-{
-	int a,b;
-	printf("Enter a:");
-	scanf("%d",&a);
-	printf("Enter b:");
-	scanf("%d",&b);
-	add(a,b);
-	sub(a,b);
-	mul(a,b);
-	div(a,b);
-	return 0;
-}
-
-//finding interest
-#include<stdio.h>
-int main()
-{
-	int p,n,r;
-	printf("Enter p:");
-	scanf("%d",&p);
-	printf("Enter n:");
-	scanf("%d",&n);
-	printf("Enter r:");
-	scanf("%d",&r);
-	si(p,n,r);
-}
-void si(int a,int b,int c)
-{
-	int i;
-	i=(a*b*c)/100;
-	printf("SI is %d",i);
-}
-
-//printing mass energy values
-#include<stdio.h>
-int main()
-{
-	int m,c;
-	printf("Enter m:");
-	scanf("%d",&m);
-	printf("Enter c:");
-	scanf("%d",&c);
-	massenergy(m,c);
-}
-void massenergy(int a,int b)
-{
-	int me;
-	me=a*b*b;
-	printf("Mass Energy is %d",me);
-}
-
-//printing factorial
-#include<stdio.h>
-int main()
-{
-	fact();
-	return 0;
-}
-void fact(){
-	int i,n,f=1;
-	printf("Enter n:");
-	scanf("%d",&n);
-	for(i=1;i<=n;i++){
-		f=f*i;//...another method f*=i;
-	}
-	printf("Factorial value is %d",f);
-}
-
-//printing user defined function
-#include<stdio.h>
-int main()
-{
-	int x=2,y=3;
-	add(x,y);
-	return 0;
-}
-void add(int a,int b)
-{
-	int c;
-	c=a+b;
-	printf("Sum is %d",c);
-}
-
-//printing sum of numbers
-#include<stdio.h>
-int main()
-{
-	int sum=add();
-	printf("Sum is %d",add());
-	return 0;
-}
-int add()
-{
-	int a=2,b=3;
-	int c;
-	c=a+b;
-	return c;
-}
-
-//printing add numbers
-#include<stdio.h>
-int main()
-{
-	int x=2,y=3;
-	add(x,y);
-	printf("Sum is %d",add(x,y ));
-	return 0;
-}
-int add(int a,int b)
-{
-	int c;
-	c=a+b;
-	return c;
-}
-
-//printing user defined function
-#include<stdio.h>
-int main()
-{
-	add();
-	return 0;
-}
-int add()
-{
-	int c;
-	int a=2,b=3;
-	c=a+b;
-	printf("Sum is %d",c);
-	return 0;
-}
-
-//sum of values
-#include<stdio.h>
-int main()
-{
-	int a,b;
-	a=5;
-	b=2;
-	add(a,b);
-	return 0;
-}
-void add(int x,int y)
-{
-	 int z=x+y;
-	printf("Sum is %d",z);
-}
-
-//printing parameters
-#include<stdio.h>
-int main()
-{
-	int a,b;
-	a=5;
-	b=2;
-	add(&a,&b);
-	return 0;
-}
-void add(int *x,int *y)
-{
-	 int z=*x+*y;
-	printf("Sum is %d",z);
-}*/
-
-//printing sum of series
+//sum of even numbers
 #include<stdio.h>
 int main()
 {
@@ -197,12 +7,11 @@ int main()
 }
 void sum()
 {
-	int i,sum=0,n;
+	int i=2,sum=0,n;
 	printf("Enter n:");
 	scanf("%d",&n);
-	sum=(n*(n+1))/2;
-	printf("sum of series:");
-	for(i=1;i<=n;i++)
+	printf("sum of even numbers:\n");
+	while(i<=n)
 	{
 		if(i!=n)
 		{
@@ -210,7 +19,174 @@ void sum()
 		}
 		else
 		{
-			printf("%d=%d",i,sum);
+			printf("%d=",i);
 		}
+		sum=sum+i
+		;
+		i=i+2;
 	}
+	printf("%d",sum);
+}
+
+//sum of odd numbers
+
+#include<stdio.h>
+int main()
+{
+	sum();
+	return 0;
+}
+void sum()
+{
+	int i=1,sum=0,n;
+	printf("Enter n:");
+	scanf("%d",&n);
+	printf("sum of odd numbers:\n");
+	while(i<=n)
+	{
+		if(i!=n)
+		{
+			printf("%d+",i);
+		}
+		else
+		{
+			printf("%d=",i);
+		}
+		sum=sum+i
+		;
+		i=i+2;
+	}
+	printf("%d",sum);
+}
+
+//printing recursion
+#include<stdio.h>
+int main()
+{
+	int n,res;
+	printf("Enter a number:");
+	scanf("%d",&n);
+	res=sum(n);
+	printf("sum= %d",res);
+	return 0;
+}
+int sum ( a)
+{
+	if (a!=0)
+	{
+		return a+sum(a-1);
+	}
+	else
+	{
+		return a;
+	}
+}
+
+//sum of factorial numbers recursion
+#include<stdio.h>
+int main()
+{
+	int x,n;
+	printf("Enter a number:");
+	scanf("%d",&n);
+	x=fact(n);
+	printf("Value %d and its factorial value is %d",n,x);
+}
+int fact(n)
+{
+	if(n>=1)
+	{
+		return n*fact(n-1);
+	}
+	else
+	{
+		return 1;
+	}
+}
+
+//printing math function
+
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+	float n;
+	printf("Enter float number:");
+	scanf("%f",&n);
+	int d=ceil(n);
+	int g=floor(n);
+	printf("ceil value is %d\n",d);
+	printf("floorvalue is %d\n",g);
+	return 0;
+}
+
+//power function
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+	int n,p;
+	printf("Enter a value:");
+	scanf("%d",&n);
+	printf("Enter power value:");
+	scanf("%d",&p);
+	int x=pow(n,p);
+	printf("%d power %d is %d",n,p,x);
+	return 0;
+}
+
+//printing absolute value
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+	int n;
+	printf("Enter a value:");
+	scanf("%d",&n);
+	int x=abs(n);
+	printf("Values of %d is %d",n,x);
+	return 0;
+}
+
+//trigonometry function
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+	int n;
+	printf("Enter a value:");
+	scanf("%d",&n);
+	int s=sin(n);
+	int c=cos(n);
+	int t=tan(n);
+	printf("Sin value of %d is %d \n",n,s);
+	printf("cos value of %d is %d \n" ,n,c);
+	printf("tan value of %d is %d \n",n,t);
+	return 0;
+}
+
+//exp function
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+	int n;
+	printf("Enter a value:");
+	scanf("%d",&n);
+	int s=exp(n);
+	printf("Exp value of %d is %d",n,s);
+	return 0;
+}
+
+//math function
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+	int n;
+	printf("Enter a value:");
+	scanf("%d",&n);
+	int s=sqrt(n);
+	printf("Exp value of %d is %d",n,s);
+	return 0;
 }
